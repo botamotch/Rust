@@ -1,0 +1,8 @@
+[package]
+name = "yuyuyui_status"
+version = "0.1.0"
+authors = ["bmkazuya <laughing00boomer@gmail.com>"]
+
+[dependencies]
+gnuplot = "0.0.26"
+csv = "1"
