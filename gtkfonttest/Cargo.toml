@@ -1,0 +1,20 @@
+[package]
+name = "gtkfonttest"
+version = "0.1.0"
+authors = ["bmkazuya <laughing00boomer@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+cairo-rs = "0.5"
+pango-sys = "0.7"
+pangocairo = "0.6"
+pangocairo-sys = "0.8"
+
+[dependencies.pango]
+features = ["v1_38"]
+version = "0.5"
+
+[dependencies.gtk]
+version = "0.5"
+features = ["v3_22"]
+#git = "https://github.com/gtk-rs/gtk"
