@@ -1,15 +1,32 @@
-# Rust練習用リポジトリ
+Rust練習用リポジトリ
+================================================================================
 
-## 作成中 or 作成予定
+### 作成中 or 作成予定
 
 - 2018-06-17 ゆゆゆいステータスプロット (yuyuyui\_status)
 - 2018-06-17 家計簿、資産管理 (未)
 
-## 作成済
+### 作成済
 
 - 2017-01-22 cat
 
-## Environment
+### Install
+--------------------------------------------------------------------------------
+### [The Rust toolchain installer](https://rustup.rs/)
+
+```
+curl https://sh.rustup.rs -sSf | sh
+```
+
+### Package Manager
+```
+# pacman -S rustup
+$ rustup toolchain install stable
+$ rustup default stable
+```
+
+### Environment
+--------------------------------------------------------------------------------
 ### rust.vim, rustfmt
 > This is a Vim plugin that provides Rust file detection, syntax highlighting, formatting, Syntastic integration, and more.
 
@@ -58,7 +75,8 @@ au FileType rust nmap <leader>gd <Plug>(rust-doc)
 - `???`：タグジャンプ（垂直分割）
 - `???`：ドキュメントを開く
 
-## 参考
+### 参考
+--------------------------------------------------------------------------------
 
 - [Rust Documentation](https://doc.rust-lang.org/)
     - [Rust Programming Language](https://doc.rust-lang.org/book/)
@@ -66,6 +84,6 @@ au FileType rust nmap <leader>gd <Plug>(rust-doc)
     - [Standard Library API Reference](https://doc.rust-lang.org/std/)
     - [The Rustonomicon](https://doc.rust-lang.org/nomicon/)
     - [Compiler Error Index](https://doc.rust-lang.org/error-index.html)
+- [The Rust Programming Language](https://doc.rust-jp.rs/book/second-edition/)
 - [Rust初心者向けハンズオン](https://chikoski.github.io/rust-handson/)
 - [Cargo : packages for Rust](https://crates.io/)
-
