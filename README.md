@@ -31,19 +31,28 @@ $ rustup default stable
 > This is a Vim plugin that provides Rust file detection, syntax highlighting, formatting, Syntastic integration, and more.
 
 `rust.vim`を入れると`rustfmt.vim`も一緒についてくる。
-`/usr/bin/rustfmt`はArchLinuxのパッケージでインストールしたけど、`cargo install`でもできるらしい。
+パッケージマネージャ又は`cargo install`のどちらでもインストールできる。
 
 - [rust-lang/rust.vim: Vim configuration for Rust.](https://github.com/rust-lang/rust.vim)
+
+```
+$ cargo install rustfmt --force
+```
 
 ### racer
 > _RACER_ = _R_ust _A_uto-_C_omplete-_er_.
 > A utility intended to provide Rust code completion for editors and IDEs.
 > Maybe one day the 'er' bit will be exploring + refactoring or something.
 
-`/usr/bin/racer`はArchLinuxのパッケージでインストールしたが、`cargo install`でもできる（上と同じ）。
+パッケージマネージャ又は`cargo install`のどちらでもインストールできるが、
+コンパイルには`nightly`が必要。
 
 - [racer-rust/racer: Rust Code Completion utility](https://github.com/racer-rust/racer)
 - [racer-rust/vim: Racer support for vim](https://github.com/racer-rust/vim-racer)
+
+```
+$ rustup run nightly cargo install racer
+```
 
 ### vimrc
 
