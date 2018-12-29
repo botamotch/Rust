@@ -52,6 +52,8 @@ $ cargo install rustfmt --force
 
 ```
 $ rustup run nightly cargo install racer
+$ rustup component add rust-src
+$ echo 'export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src' >> ~/.zshenv
 ```
 
 ### vimrc
