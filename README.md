@@ -95,6 +95,10 @@ au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
 ### Figure Example
 
+```
+![代替テキスト](画像アドレス "画像タイトル")
+```
+
 ![Figure Example](./figure/sample.png "Figure Example")
 
 ### 参考
