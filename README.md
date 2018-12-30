@@ -93,6 +93,10 @@ au FileType rust nmap <leader>gd <Plug>(rust-doc)
 **/*.rs.bk
 ```
 
+### Figure Example
+
+![Figure Example](./figure/sample.png "Figure Example")
+
 ### 参考
 --------------------------------------------------------------------------------
 
