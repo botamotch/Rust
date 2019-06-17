@@ -1,0 +1,8 @@
+[package]
+name = "app02"
+version = "0.1.0"
+authors = ["bmkazuya <laughing00boomer@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+ssh2 = "0.3"
