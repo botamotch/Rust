@@ -1,6 +1,13 @@
 Rust練習用リポジトリ
 ================================================================================
 
+マークダウンビューワ、とりあえずこの２つがあればできそう。Hello Worldまでは完了
+
+- [raphlinus/pulldown-cmark - Github](https://github.com/raphlinus/pulldown-cmark)
+  - Markdown Parser
+- [actix/actix-web - Github](https://github.com/actix/actix-web)
+  - Web application framework
+
 ### 作成中 or 作成予定
 
 - 2018-06-17 ゆゆゆいステータスプロット (yuyuyui\_status)
