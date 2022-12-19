@@ -15,7 +15,7 @@ Rust言語の練習
 
 # よく使うコマンドまとめ
 
-## Install
+## Setup Toolchain
 ```
 $ rustup toolchain install stable
 
@@ -42,7 +42,7 @@ stable-x86_64-unknown-linux-gnu (default)
 rustc 1.65.0 (897e37553 2022-11-02)
 ```
 
-## Project
+## Start Project
 ```
 $ cargo new hello_world
 $ cd hello_world
