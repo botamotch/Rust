@@ -1,97 +1,63 @@
-Rust練習用リポジトリ
+Rust Pratice
 ================================================================================
 
-マークダウンビューワ、とりあえずこの２つがあればできそう。Hello Worldまでは完了
+Rust言語の練習
 
-- [raphlinus/pulldown-cmark - Github](https://github.com/raphlinus/pulldown-cmark)
-  - Markdown Parser
-- [actix/actix-web - Github](https://github.com/actix/actix-web)
-  - Web application framework
+# 公式ドキュメント
 
-### 作成中 or 作成予定
+- [The Rust Programming Language](https://doc.rust-lang.org/)
+  - [book](https://doc.rust-lang.org/book/)
+- [The Rust Programming Language 日本語版](https://doc.rust-jp.rs/)
+  - [book](https://doc.rust-jp.rs/book-ja/)
+- [The Cargo Book](https://doc.rust-lang.org/cargo/)
+- [creates.io: Rust Package Registry](https://crates.io/)
+- [rustup.rs - The Rust toolchain installer](https://rustup.rs/)
 
-- 2018-06-17 ゆゆゆいステータスプロット (yuyuyui\_status)
-- 2018-06-17 家計簿、資産管理 (未)
+# よく使うコマンドまとめ
 
-### 作成済
-
-- 2017-01-22 cat
-
-### Install
---------------------------------------------------------------------------------
-### [The Rust toolchain installer](https://rustup.rs/)
-
+## Install
 ```
-curl https://sh.rustup.rs -sSf | sh
-```
-
-### Package Manager
-```
-# pacman -S rustup
 $ rustup toolchain install stable
+
 $ rustup default stable
+
+$ rustup toolchain list
+stable-x86_64-unknown-linux-gnu (default)
+
+$ rustup show
+Default host: x86_64-unknown-linux-gnu
+rustup home:  /home/user/.rustup
+
+installed toolchains
+--------------------
+
+stable-x86_64-unknown-linux-gnu (default)
+nightly-2022-01-14-x86_64-unknown-linux-gnu
+nightly-x86_64-unknown-linux-gnu
+
+active toolchain
+----------------
+
+stable-x86_64-unknown-linux-gnu (default)
+rustc 1.65.0 (897e37553 2022-11-02)
 ```
 
-### Environment
---------------------------------------------------------------------------------
-### rust.vim, rustfmt
-> This is a Vim plugin that provides Rust file detection, syntax highlighting, formatting, Syntastic integration, and more.
-
-`rust.vim`を入れると`rustfmt.vim`も一緒についてくる。
-パッケージマネージャ又は`cargo install`のどちらでもインストールできる。
-
-- [rust-lang/rust.vim: Vim configuration for Rust.](https://github.com/rust-lang/rust.vim)
-
+## Project
 ```
-$ cargo install rustfmt --force
+$ cargo new hello_world
+$ cd hello_world
+
+$ cargo build
+   Compiling hello_world v0.1.0 (file:///path/to/package/hello_world)
+
+$ ./target/debug/hello_world
+Hello, world!
+
+$ cargo run
+     Fresh hello_world v0.1.0 (file:///path/to/package/hello_world)
+   Running `target/hello_world`
+Hello, world!
 ```
-
-### racer
-> _RACER_ = _R_ust _A_uto-_C_omplete-_er_.
-> A utility intended to provide Rust code completion for editors and IDEs.
-> Maybe one day the 'er' bit will be exploring + refactoring or something.
-
-パッケージマネージャ又は`cargo install`のどちらでもインストールできるが、
-コンパイルには`nightly`が必要。
-
-- [racer-rust/racer: Rust Code Completion utility](https://github.com/racer-rust/racer)
-- [racer-rust/vim: Racer support for vim](https://github.com/racer-rust/vim-racer)
-
-```
-$ rustup run nightly cargo install racer
-$ rustup component add rust-src
-$ echo 'export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src' >> ~/.zshenv
-```
-
-### vimrc
-
-```
-if dein#load_state(expand('~/.vim/dein'))
-  call dein#begin(expand('~/.vim/dein'))
-  ...
-  call dein#add('rust-lang/rust.vim')
-  call dein#add('racer-rust/vim-racer')
-  ...
-  call dein#end()
-  call dein#save_state()
-endif
-...
-let g:rustfmt_autosave = 1
-set hidden
-
-au FileType rust nmap gd <Plug>(rust-def)
-au FileType rust nmap gs <Plug>(rust-def-split)
-au FileType rust nmap gx <Plug>(rust-def-vertical)
-au FileType rust nmap <leader>gd <Plug>(rust-doc)
-```
-
-### Command
-
-- `<C-x><C-o>`：コード補完
-- `???`：タグジャンプ
-- `???`：タグジャンプ（水平分割）
-- `???`：タグジャンプ（垂直分割）
-- `???`：ドキュメントを開く
 
 ### gitignore
 
@@ -100,15 +66,7 @@ au FileType rust nmap <leader>gd <Plug>(rust-doc)
 **/*.rs.bk
 ```
 
-### Figure Example
-
-```
-![代替テキスト](画像アドレス "画像タイトル")
-```
-
-![Figure Example](./figure/sample.png "Figure Example")
-
-### 参考
+### その他参考
 --------------------------------------------------------------------------------
 
 - [Rust Documentation](https://doc.rust-lang.org/)
