@@ -66,8 +66,28 @@ Hello, world!
 **/*.rs.bk
 ```
 
-### その他参考
---------------------------------------------------------------------------------
+# Docker
+
+- [rust - Official Image | Docker Hub](https://hub.docker.com/_/rust)
+
+```Dockerfile
+FROM rust:1.31
+
+WORKDIR /usr/src/myapp
+COPY . .
+
+RUN cargo install --path .
+
+CMD ["myapp"]
+```
+
+```
+$ docker build -t my-rust-app .
+$ docker run -it --rm --name my-running-app my-rust-app
+```
+
+
+# その他
 
 - [Rust Documentation](https://doc.rust-lang.org/)
     - [Rust Programming Language](https://doc.rust-lang.org/book/)
