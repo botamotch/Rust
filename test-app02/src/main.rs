@@ -17,16 +17,26 @@ this is a ~~complicated~~ *very simple* example.
 
 [Zenn by https](https://zenn.dev/)
 
-[Zenn by http](http://zenn.dev/)
+[Zenn by http](http://zenn.dev/){:target=\"_blank\"}
 
 auto link by angle bracket <>
 <https://zenn.dev/>
 
+https://zenn.dev/
+
 - [ ] task 1
 - [x] task 2
 - [ ] task 3
-";
 
+Peter
+Peter
+
+Peter Peter
+
+Peters
+
+Jhon
+";
 
   let mut options = Options::empty();
   options.insert(Options::ENABLE_TASKLISTS);
@@ -43,6 +53,12 @@ auto link by angle bracket <>
       url.replace("http://", "https://").into(),
       title,
     )),
+    Event::Text(text) => Event::Text(
+      text
+        .replace("Peter", "John")
+        .replace("https://zenn.dev", "<https://zenn.dev>")
+        .into(),
+    ),
     Event::Start(Tag::Paragraph) => event,
     _ => event,
   });
