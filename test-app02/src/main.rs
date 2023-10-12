@@ -1,4 +1,4 @@
-use pulldown_cmark::{Options, Parser, Event};
+use pulldown_cmark::{Event, Options, Parser, Tag};
 
 fn main() {
   println!(">>> Hello, pulldown-cmark!");
@@ -15,16 +15,35 @@ goodbye honey
 
 this is a ~~complicated~~ *very simple* example.
 
+[Zenn by https](https://zenn.dev/)
+
+[Zenn by http](http://zenn.dev/)
+
+auto link by angle bracket <>
+<https://zenn.dev/>
+
 - [ ] task 1
 - [x] task 2
 - [ ] task 3
 ";
 
+
   let mut options = Options::empty();
   options.insert(Options::ENABLE_TASKLISTS);
+  // options.insert(Options::ENABLE_SMART_PUNCTUATION);
+  // options.insert(Options::ENABLE_TABLES);
+  // options.insert(Options::ENABLE_FOOTNOTES);
+  // options.insert(Options::ENABLE_STRIKETHROUGH);
+  options.insert(Options::ENABLE_HEADING_ATTRIBUTES);
   let parser = Parser::new_ext(markdown_input, options);
   let parser = parser.map(|event| match event {
     Event::SoftBreak => Event::HardBreak,
+    Event::Start(Tag::Link(link_type, url, title)) => Event::Start(Tag::Link(
+      link_type,
+      url.replace("http://", "https://").into(),
+      title,
+    )),
+    Event::Start(Tag::Paragraph) => event,
     _ => event,
   });
 
