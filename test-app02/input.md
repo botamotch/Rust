@@ -1,10 +1,5 @@
 # markdown
 
-hello world
-goodbye honey
-
----
-
 this is a ~~complicated~~ *very simple* example.
 
 [Zenn by https](https://zenn.dev/)
@@ -28,8 +23,4 @@ Peter
 
 Peter Peter
 
-Peters
-
----
-
-Jhon
+https://zenn.dev/
