@@ -87,3 +87,9 @@ $ pnpm tauri info
     - devUrl: http://localhost:1420/
     - bundler: Vite
 ```
+
+### Android app with wasm
+
+```
+$ wasm-pack build --target web -dev
+```
