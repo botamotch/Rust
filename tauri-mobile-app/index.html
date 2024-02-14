@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tauri App</title>
     <script type="module" src="/src/main.ts" defer></script>
+    <!--
     <script type="module">
-      import init, { draw } from "./src-game/pkg/src_game.js"
+      import init, { draw } from "./pkg/src_game.js"
       init().then(() => {
         draw();
       });
     </script>
+    -->
+    <script src="./static/script.ts"></script>
     <style>
       .logo.vite:hover {
         filter: drop-shadow(0 0 2em #747bff);
@@ -23,7 +26,7 @@
     </style>
   </head>
 
-  <body>
+  <body onload="draw()">
     <div class="container">
       <p>hello tauri mobile app</p>
       <canvas id="canvas1"></canvas>

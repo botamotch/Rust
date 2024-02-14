@@ -91,5 +91,5 @@ $ pnpm tauri info
 ### Android app with wasm
 
 ```
-$ wasm-pack build --target web -dev
+$ wasm-pack build --target web --dev --out-dir ../pkg
 ```
